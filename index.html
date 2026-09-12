@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NEXARIUM Keccak-256 &amp; Whirlpool Generator | Professional Local Hash Utility | NVO987 | Nicholas Van-Orton</title>
+
+  <meta name="description" content="NEXARIUM Keccak-256 and Whirlpool Generator is a professional browser-based cryptographic utility for generating and verifying Keccak-256 and Whirlpool hashes locally in the browser without intentionally transmitting user-submitted data.">
+
+  <meta name="keywords" content="NVO987, NEXARIUM, Keccak-256, Keccak, Whirlpool, Hash Generator, Cryptography, Checksum, Integrity Verification, Browser Hash Generator, Local Processing, File Hashing, Digital Security">
+
+  <meta name="author" content="Nicholas Van-Orton">
+  <meta name="creator" content="Nicholas Van-Orton">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+  <meta name="theme-color" content="#1d211f">
+  <meta name="color-scheme" content="light">
+
+  <link rel="canonical" href="https://keccak.nvo987.us">
+  <link rel="me" href="https://identity.nvo987.us">
+
+  <meta name="did" content="did:web:identity.nvo987.us">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEXARIUM">
+  <meta property="og:title" content="NEXARIUM Keccak-256 &amp; Whirlpool Generator">
+  <meta property="og:description" content="Professional browser-based Keccak-256 and Whirlpool hash generator with local processing, file hashing, integrity verification, and privacy-focused cryptographic utilities.">
+  <meta property="og:url" content="https://keccak.nvo987.us">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://keccak.nvo987.us/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NEXARIUM Keccak-256 &amp; Whirlpool Generator">
+  <meta name="twitter:description" content="Generate and verify Keccak-256 and Whirlpool hashes locally in your browser without intentionally uploading your data.">
+  <meta name="twitter:image" content="https://keccak.nvo987.us/og-image.jpg">
+
+  <link rel="alternate" type="application/did+json" href="https://identity.nvo987.us/.well-known/did.json">
+  <link rel="alternate" type="application/did+ld+json" href="https://identity.nvo987.us/.well-known/did-configuration.json">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  <link rel="manifest" href="/manifest.json">
+
+  <meta name="msapplication-TileColor" content="#f4f0e8">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+
+  <style>
+    :root {
+      --ink: #1d211f;
+      --ink-soft: #404642;
+      --muted: #777d78;
+      --cream: #f4f0e8;
+      --cream-deep: #e9e3d8;
+      --paper: #fbfaf7;
+      --line: rgba(29, 33, 31, 0.12);
+      --line-strong: rgba(29, 33, 31, 0.22);
+      --accent: #9a6c3c;
+      --accent-dark: #7f562e;
+      --accent-light: #c7a77d;
+      --success: #246b4c;
+      --error: #a13f3f;
+      --shadow: 0 18px 50px rgba(27, 31, 29, 0.08);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(154, 108, 60, 0.08),
+          transparent 30rem
+        ),
+        var(--cream);
+      color: var(--ink);
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    button,
+    textarea,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button,
+    a,
+    label,
+    select {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    textarea:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    .upload-btn:focus-within {
+      outline: 3px solid rgba(154, 108, 60, 0.3);
+      outline-offset: 3px;
+    }
+
+    .site-header {
+      position: relative;
+      overflow: hidden;
+      padding: 1rem 1rem 0;
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 1.5rem 3.75rem;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+      content: "";
+      opacity: 0.7;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 600;
+      letter-spacing: -0.035em;
+    }
+
+    h1 {
+      max-width: 950px;
+      margin: 0 auto;
+      font-size: clamp(2.75rem, 8vw, 6.5rem);
+      line-height: 0.98;
+    }
+
+    .subtitle {
+      max-width: 700px;
+      margin: 1.5rem auto 0;
+      color: var(--ink-soft);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .privacy {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.55rem;
+      margin: 1.4rem 0 0;
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .privacy span {
+      white-space: nowrap;
+    }
+
+    .privacy .dot {
+      color: var(--accent);
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+      padding: 2rem 0 5rem;
+    }
+
+    .card {
+      position: relative;
+      margin-bottom: 1.25rem;
+      padding: clamp(1.35rem, 4vw, 2.5rem);
+      background: rgba(251, 250, 247, 0.78);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .card::before {
+      position: absolute;
+      top: 0;
+      left: 2rem;
+      width: 52px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 0 0 999px 999px;
+      content: "";
+    }
+
+    .card h2 {
+      margin-bottom: 1.35rem;
+      font-size: clamp(1.65rem, 4vw, 2.35rem);
+      line-height: 1.15;
+    }
+
+    .card p {
+      max-width: 900px;
+      margin: 0;
+      color: var(--ink-soft);
+    }
+
+    .input-label {
+      display: block;
+      margin-bottom: 0.65rem;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    textarea,
+    input[type="text"],
+    select {
+      width: 100%;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-md);
+      background: var(--paper);
+      color: var(--ink);
+      transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        background 180ms ease;
+    }
+
+    textarea:hover,
+    input[type="text"]:hover,
+    select:hover {
+      border-color: rgba(154, 108, 60, 0.45);
+    }
+
+    textarea:focus,
+    input[type="text"]:focus,
+    select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(154, 108, 60, 0.1);
+      outline: none;
+    }
+
+    textarea {
+      min-height: 260px;
+      padding: 1.2rem;
+      resize: vertical;
+      line-height: 1.65;
+    }
+
+    input[type="text"],
+    select {
+      padding: 1rem 1.1rem;
+    }
+
+    .algorithm-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .algorithm-info {
+      display: flex;
+      align-items: center;
+      min-height: 52px;
+      padding: 0.8rem 1rem;
+      border-left: 2px solid var(--accent-light);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      background: rgba(233, 227, 216, 0.42);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
+
+    button,
+    .upload-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.75rem 1.1rem;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--ink);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition:
+        transform 180ms ease,
+        background 180ms ease,
+        color 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    button:hover,
+    .upload-btn:hover {
+      transform: translateY(-1px);
+      background: var(--ink);
+      color: var(--cream);
+      box-shadow: 0 10px 24px rgba(29, 33, 31, 0.12);
+    }
+
+    #hashBtn,
+    .upload-btn {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fffaf2;
+    }
+
+    #hashBtn:hover,
+    .upload-btn:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .stat {
+      min-width: 0;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(233, 227, 216, 0.42);
+    }
+
+    .stat-label {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .stat-value {
+      overflow-wrap: anywhere;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    #result {
+      min-height: 110px;
+      margin-top: 1.25rem;
+      padding: 1.2rem;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-md);
+      background: var(--ink);
+      color: #eee9df;
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+      font-size: 0.82rem;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+    }
+
+    .file-area {
+      display: grid;
+      gap: 1rem;
+    }
+
+    #selectedFile {
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      padding: 0.85rem 1rem;
+      border-left: 2px solid var(--accent-light);
+      color: var(--muted);
+      background: rgba(233, 227, 216, 0.42);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      overflow-wrap: anywhere;
+    }
+
+    .verification-result {
+      min-height: 32px;
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .success,
+    .error {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .success {
+      color: var(--success);
+      background: rgba(36, 107, 76, 0.1);
+    }
+
+    .error {
+      color: var(--error);
+      background: rgba(161, 63, 63, 0.1);
+    }
+
+    .prose {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .prose p + p {
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .license-box {
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(233, 227, 216, 0.42);
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+
+    .license-box strong {
+      color: var(--ink);
+    }
+
+    .site-footer {
+      position: relative;
+      overflow: hidden;
+      margin-top: 3rem;
+      padding: 4rem 1rem 1.5rem;
+      background: var(--ink);
+      color: #f3eee5;
+    }
+
+    .footer-inner {
+      width: min(100% - 1rem, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      gap: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(244, 240, 232, 0.15);
+    }
+
+    .footer-brand {
+      max-width: 470px;
+    }
+
+    .footer-brand-name {
+      margin: 0;
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      line-height: 1;
+    }
+
+    .footer-brand p {
+      margin: 1rem 0 0;
+      color: rgba(244, 240, 232, 0.62);
+    }
+
+    .footer-identity {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .footer-link {
+      display: grid;
+      gap: 0.25rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(244, 240, 232, 0.1);
+      text-decoration: none;
+      transition:
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .footer-link:hover {
+      color: var(--accent-light);
+      transform: translateX(4px);
+    }
+
+    .footer-label {
+      color: rgba(244, 240, 232, 0.48);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .footer-value {
+      overflow-wrap: anywhere;
+      font-size: 0.95rem;
+    }
+
+    .did-value {
+      display: inline-block;
+      width: fit-content;
+      max-width: 100%;
+      padding: 0.35rem 0.5rem;
+      border: 1px solid rgba(244, 240, 232, 0.16);
+      border-radius: 7px;
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+      font-size: 0.75rem;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      color: rgba(244, 240, 232, 0.45);
+      font-size: 0.76rem;
+    }
+
+    .footer-bottom a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--accent-light);
+    }
+
+    @media (min-width: 700px) {
+      .header-inner {
+        padding: 5.5rem 3rem 4.75rem;
+      }
+
+      .container {
+        padding-top: 3rem;
+      }
+
+      .stats {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .footer-top {
+        grid-template-columns:
+          minmax(0, 0.9fr)
+          minmax(0, 1.1fr);
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .algorithm-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .actions > * {
+        flex: 1 1 100%;
+      }
+
+      .privacy {
+        display: block;
+        line-height: 2;
+      }
+
+      .privacy .dot {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://nvo987.us#person",
+        "name": "Nicholas Van-Orton",
+        "jobTitle": "Independent researcher, founder of NVO987 Association",
+        "url": "https://nvo987.us",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "DID Document",
+          "value": "https://identity.nvo987.us/.well-known/did.json"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://nvo987.fr#organization",
+        "name": "NVO987 – Culture Visuelle Moderne et Contemporaine Association",
+        "alternateName": [
+          "NVO987 Association",
+          "NVO987 – Culture Visuelle Moderne et Contemporaine"
+        ],
+        "url": "https://nvo987.fr",
+        "foundingDate": "2026",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "44 Rue Pasquier",
+          "postalCode": "75008",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        },
+        "founder": {
+          "@id": "https://nvo987.us#person"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "NEXARIUM Keccak-256 & Whirlpool Generator",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Web Browser",
+        "url": "https://keccak.nvo987.us",
+        "description": "Professional browser-based Keccak-256 and Whirlpool hash generator and verification utility.",
+        "creator": {
+          "@id": "did:web:identity.nvo987.us"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "NEXARIUM",
+        "url": "https://nexarium.us",
+        "founder": {
+          "@id": "did:web:identity.nvo987.us"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <div class="eyebrow">
+        Nexarium / Cryptographic Utility
+      </div>
+
+      <h1>
+        NEXARIUM Keccak-256 &amp; Whirlpool
+      </h1>
+
+      <p class="subtitle">
+        Professional Client-Side Hash Generator
+      </p>
+
+      <p class="privacy">
+        <span>No Cookies</span>
+        <span class="dot">•</span>
+        <span>No Analytics</span>
+        <span class="dot">•</span>
+        <span>No Tracking</span>
+        <span class="dot">•</span>
+        <span>Local Processing</span>
+      </p>
+
+    </div>
+  </header>
+
+
+  <main class="container">
+
+    <section class="card">
+
+      <h2>Cryptographic Hash Generator</h2>
+
+      <div class="algorithm-row">
+
+        <div>
+
+          <label
+            class="input-label"
+            for="algorithm"
+          >
+            Algorithm
+          </label>
+
+          <select id="algorithm">
+
+            <option value="Keccak-256">
+              Keccak-256
+            </option>
+
+            <option value="Whirlpool">
+              Whirlpool
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div
+          class="algorithm-info"
+          id="algorithmInfo"
+        >
+          Keccak-256 · 256-bit output · 64 hexadecimal characters
+        </div>
+
+      </div>
+
+
+      <label
+        class="input-label"
+        for="textInput"
+      >
+        Source Text
+      </label>
+
+      <textarea
+        id="textInput"
+        placeholder="Enter text to generate a Keccak-256 hash"
+        spellcheck="false"
+      ></textarea>
+
+
+      <div class="actions">
+
+        <button
+          id="hashBtn"
+          type="button"
+        >
+          Generate
+        </button>
+
+        <button
+          id="copyBtn"
+          type="button"
+        >
+          Copy
+        </button>
+
+        <button
+          id="clearBtn"
+          type="button"
+        >
+          Clear All
+        </button>
+
+        <button
+          id="txtBtn"
+          type="button"
+        >
+          Export TXT
+        </button>
+
+        <button
+          id="jsonBtn"
+          type="button"
+        >
+          Export JSON
+        </button>
+
+      </div>
+
+
+      <div class="stats">
+
+        <div class="stat">
+          <span class="stat-label">
+            Characters
+          </span>
+
+          <div
+            class="stat-value"
+            id="charCount"
+          >
+            0
+          </div>
+        </div>
+
+
+        <div class="stat">
+          <span class="stat-label">
+            Bytes
+          </span>
+
+          <div
+            class="stat-value"
+            id="byteCount"
+          >
+            0
+          </div>
+        </div>
+
+
+        <div class="stat">
+          <span class="stat-label">
+            Hash Time
+          </span>
+
+          <div
+            class="stat-value"
+            id="hashTime"
+          >
+            0 ms
+          </div>
+        </div>
+
+
+        <div class="stat">
+          <span class="stat-label">
+            Hash Length
+          </span>
+
+          <div
+            class="stat-value"
+            id="hashLength"
+          >
+            0
+          </div>
+        </div>
+
+      </div>
+
+
+      <div
+        id="result"
+        aria-live="polite"
+      >
+        Awaiting input...
+      </div>
+
+    </section>
+
+
+    <section class="card">
+
+      <h2>File Hashing</h2>
+
+      <div class="file-area">
+
+        <label
+          for="fileInput"
+          class="upload-btn"
+        >
+          Select File
+        </label>
+
+        <input
+          type="file"
+          id="fileInput"
+          hidden
+        >
+
+        <div id="selectedFile">
+          No file selected
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="card">
+
+      <h2>Hash Verification</h2>
+
+      <label
+        class="input-label"
+        for="verifyInput"
+      >
+        Expected Hash
+      </label>
+
+      <input
+        type="text"
+        id="verifyInput"
+        placeholder="Paste a 64-character Keccak-256 hash"
+        autocomplete="off"
+        spellcheck="false"
+      >
+
+      <div class="actions">
+
+        <button
+          id="verifyBtn"
+          type="button"
+        >
+          Verify
+        </button>
+
+      </div>
+
+      <div
+        id="verifyResult"
+        class="verification-result"
+        aria-live="polite"
+      ></div>
+
+    </section>
+
+
+    <section class="card">
+
+      <h2>Privacy &amp; GDPR Statement</h2>
+
+      <div class="prose">
+
+        <p>
+          This utility is designed to perform Keccak-256 and Whirlpool cryptographic hashing locally within the user's browser environment.
+        </p>
+
+        <p>
+          Text entered into the interface and files selected for hashing are processed locally by the browser for the purpose of generating the requested cryptographic hash. The application does not intentionally upload submitted text or selected file contents to the operator's servers for hash calculation.
+        </p>
+
+        <p>
+          No registration, authentication, subscription or user account is required to use the utility.
+        </p>
+
+        <p>
+          The application does not intentionally implement advertising technologies, analytics platforms, cross-site tracking mechanisms or user profiling.
+        </p>
+
+        <p>
+          The cryptographic implementation is provided through the open-source hash-wasm package and may be loaded from a third-party content delivery network. Loading such resources may result in ordinary technical network information, including IP address, browser information and request metadata, being processed by the infrastructure provider.
+        </p>
+
+        <p>
+          Hash input and selected file contents are processed by the browser-side cryptographic implementation and are not intentionally transmitted to the operator for the purpose of calculating a hash.
+        </p>
+
+        <p>
+          Hosting providers, CDN providers, DNS operators, infrastructure providers and network service providers may independently process technical information or maintain security and operational logs as required for service delivery, security, abuse prevention and troubleshooting.
+        </p>
+
+        <p>
+          This website does not represent that browser-side processing provides absolute confidentiality. Users should independently assess the security of their device, browser, browser extensions, operating system, network and local environment before processing confidential or highly sensitive information.
+        </p>
+
+        <p>
+          Where applicable, technical processing associated with access to the website may be subject to the General Data Protection Regulation (EU) 2016/679 and other applicable data-protection laws. The actual legal qualification depends on the technical infrastructure and processing activities in operation at the relevant time.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="card">
+
+      <h2>Cryptographic Information</h2>
+
+      <div class="prose">
+
+        <p>
+          Keccak-256 and Whirlpool are cryptographic hash functions. They are designed to produce deterministic fixed-length digest values from arbitrary input data.
+        </p>
+
+        <p>
+          Keccak-256 produces a 256-bit digest, represented as 64 hexadecimal characters.
+        </p>
+
+        <p>
+          Whirlpool produces a 512-bit digest, represented as 128 hexadecimal characters.
+        </p>
+
+        <p>
+          Keccak-256 is not identical to SHA3-256. Although both algorithms are members of the Keccak family and produce 256-bit outputs, they use different padding and domain-separation conventions.
+        </p>
+
+        <p>
+          A cryptographic hash is not encryption and is not designed to allow recovery of the original input from the resulting digest.
+        </p>
+
+        <p>
+          Hash comparison can be used for integrity verification, but a matching digest by itself does not establish authorship, authenticity, ownership, provenance, legality or absence of malicious content.
+        </p>
+
+        <p>
+          Users remain responsible for selecting an appropriate algorithm and independently validating cryptographic results before relying upon them for security, legal, commercial, compliance, forensic or production purposes.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="card">
+
+      <h2>Third-Party Software &amp; License</h2>
+
+      <div class="prose">
+
+        <p>
+          This application uses the open-source <strong>hash-wasm</strong> JavaScript/WebAssembly cryptographic library for browser-based Keccak and Whirlpool hashing.
+        </p>
+
+        <div class="license-box">
+
+          <strong>hash-wasm</strong><br>
+
+          Open-source cryptographic hashing library.<br>
+
+          Licensed under the MIT License.
+
+        </div>
+
+        <p>
+          Copyright and license rights relating to the third-party software remain with their respective authors and contributors.
+        </p>
+
+        <p>
+          The use of hash-wasm does not transfer ownership of NEXARIUM, NVO987, this website, its design, branding, original content or other proprietary materials to the library authors or contributors.
+        </p>
+
+        <p>
+          The applicable third-party license remains the governing license for the corresponding third-party software component.
+        </p>
+
+        <p>
+          Users and redistributors should retain applicable copyright and license notices when redistributing the third-party component.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="card">
+
+      <h2>Legal Notice</h2>
+
+      <div class="prose">
+
+        <p>
+          This service is provided on an "as-is" and "as-available" basis without warranties, guarantees or representations of any kind, whether express or implied, to the maximum extent permitted by applicable law.
+        </p>
+
+        <p>
+          Hash outputs are provided as technical results only. Users remain solely responsible for independently validating cryptographic outputs before relying upon them within legal, commercial, operational, security, compliance, forensic or production environments.
+        </p>
+
+        <p>
+          The service is not intended to constitute legal, regulatory, compliance, forensic, cybersecurity or professional technical advice.
+        </p>
+
+        <p>
+          The operator does not guarantee uninterrupted availability, error-free operation, compatibility with every browser or device, or suitability for any particular purpose.
+        </p>
+
+        <p>
+          The operator is not responsible for errors caused by incorrect input, corrupted files, browser limitations, device failures, malicious software, browser extensions, compromised systems, network conditions, third-party dependencies or circumstances outside the operator's reasonable control.
+        </p>
+
+        <p>
+          To the maximum extent permitted by applicable law, the operator shall not be liable for indirect, incidental, special, consequential or punitive damages arising from the use, misuse, interpretation or reliance upon this service.
+        </p>
+
+        <p>
+          Nothing in this notice is intended to exclude or limit liability where such exclusion or limitation is prohibited by applicable law.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="card">
+
+      <h2>Acceptable Use</h2>
+
+      <div class="prose">
+
+        <p>
+          Users are responsible for ensuring that their use of this utility complies with all applicable laws, regulations, contractual obligations, intellectual-property rights and confidentiality requirements.
+        </p>
+
+        <p>
+          The availability of a cryptographic hashing function does not grant permission to process, reproduce, disclose or distribute data belonging to another person or organization.
+        </p>
+
+        <p>
+          Users should not process personal, confidential, proprietary, regulated or otherwise sensitive information unless they have the necessary authorization and appropriate legal basis.
+        </p>
+
+        <p>
+          The operator does not assume responsibility for the origin, ownership, legality, content or intended use of data supplied by users.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <h2 class="footer-brand-name">
+            NEXARIUM
+          </h2>
+
+          <p>
+            Professional Cryptographic Utilities
+          </p>
+
+        </div>
+
+
+        <div class="footer-identity">
+
+          <a
+            class="footer-link"
+            href="mailto:nvo@nvo987.us"
+          >
+            <span class="footer-label">
+              Contact
+            </span>
+
+            <span class="footer-value">
+              nvo@nvo987.us
+            </span>
+          </a>
+
+
+          <a
+            class="footer-link"
+            href="https://identity.nvo987.us"
+            target="_blank"
+            rel="me noopener noreferrer"
+          >
+            <span class="footer-label">
+              Verifiable Digital Identity
+            </span>
+
+            <code class="did-value">
+              did:web:identity.nvo987.us
+            </code>
+          </a>
+
+
+          <a
+            class="footer-link"
+            href="https://www.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="footer-label">
+              Website
+            </span>
+
+            <span class="footer-value">
+              www.nvo987.us
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © Nexarium
+        </span>
+
+        <span>
+
+          <a
+            href="https://www.nvo987.us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            NVO987
+          </a>
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script type="module">
+
+    /*
+     * NEXARIUM Keccak-256 & Whirlpool
+     *
+     * Cryptographic implementation:
+     * hash-wasm
+     *
+     * Algorithms:
+     * Keccak-256
+     * Whirlpool
+     *
+     * Processing:
+     * Browser-side / client-side
+     *
+     * The selected text and files are passed directly
+     * to the local hashing implementation.
+     */
+
+    import {
+      keccak,
+      whirlpool
+    } from "https://cdn.jsdelivr.net/npm/hash-wasm@4.12.0/dist/index.esm.js";
+
+
+    const textInput =
+      document.getElementById("textInput");
+
+    const resultBox =
+      document.getElementById("result");
+
+    const hashTime =
+      document.getElementById("hashTime");
+
+    const hashLength =
+      document.getElementById("hashLength");
+
+    const charCount =
+      document.getElementById("charCount");
+
+    const byteCount =
+      document.getElementById("byteCount");
+
+    const verifyInput =
+      document.getElementById("verifyInput");
+
+    const verifyResult =
+      document.getElementById("verifyResult");
+
+    const fileInput =
+      document.getElementById("fileInput");
+
+    const selectedFile =
+      document.getElementById("selectedFile");
+
+    const algorithm =
+      document.getElementById("algorithm");
+
+    const algorithmInfo =
+      document.getElementById("algorithmInfo");
+
+
+    function getAlgorithmConfig() {
+
+      if (
+        algorithm.value === "Whirlpool"
+      ) {
+
+        return {
+          name: "Whirlpool",
+          bytes: 64,
+          bits: 512,
+          hexLength: 128
+        };
+
+      }
+
+
+      return {
+        name: "Keccak-256",
+        bytes: 32,
+        bits: 256,
+        hexLength: 64
+      };
+
+    }
+
+
+    function updateAlgorithmUI() {
+
+      const config =
+        getAlgorithmConfig();
+
+
+      if (
+        config.name === "Whirlpool"
+      ) {
+
+        algorithmInfo.textContent =
+          "Whirlpool · 512-bit output · 128 hexadecimal characters";
+
+        textInput.placeholder =
+          "Enter text to generate a Whirlpool hash";
+
+        verifyInput.placeholder =
+          "Paste a 128-character Whirlpool hash";
+
+      } else {
+
+        algorithmInfo.textContent =
+          "Keccak-256 · 256-bit output · 64 hexadecimal characters";
+
+        textInput.placeholder =
+          "Enter text to generate a Keccak-256 hash";
+
+        verifyInput.placeholder =
+          "Paste a 64-character Keccak-256 hash";
+
+      }
+
+
+      verifyInput.value = "";
+
+      verifyResult.innerHTML = "";
+
+      resultBox.textContent =
+        "Awaiting input...";
+
+      hashLength.textContent =
+        "0";
+
+      hashTime.textContent =
+        "0 ms";
+
+    }
+
+
+    async function hashBytes(data) {
+
+      if (
+        !(data instanceof Uint8Array)
+      ) {
+
+        data =
+          new Uint8Array(data);
+
+      }
+
+
+      const config =
+        getAlgorithmConfig();
+
+
+      if (
+        config.name === "Whirlpool"
+      ) {
+
+        return await whirlpool(data);
+
+      }
+
+
+      return await keccak(
+        data,
+        256
+      );
+
+    }
+
+
+    function updateTextStats() {
+
+      const value =
+        textInput.value;
+
+      const data =
+        new TextEncoder().encode(value);
+
+
+      charCount.textContent =
+        value.length;
+
+      byteCount.textContent =
+        data.length;
+
+    }
+
+
+    async function generateHash() {
+
+      const value =
+        textInput.value;
+
+
+      updateTextStats();
+
+
+      if (!value) {
+
+        resultBox.textContent =
+          "Please enter text.";
+
+        hashLength.textContent =
+          "0";
+
+        hashTime.textContent =
+          "0 ms";
+
+        return;
+
+      }
+
+
+      const data =
+        new TextEncoder().encode(value);
+
+
+      const start =
+        performance.now();
+
+
+      try {
+
+        const hash =
+          await hashBytes(data);
+
+
+        const end =
+          performance.now();
+
+
+        resultBox.textContent =
+          hash;
+
+        hashLength.textContent =
+          hash.length;
+
+        hashTime.textContent =
+          `${(end - start).toFixed(2)} ms`;
+
+      } catch (error) {
+
+        console.error(
+          "Hash generation error:",
+          error
+        );
+
+        resultBox.textContent =
+          "Hash generation failed.";
+
+        hashLength.textContent =
+          "0";
+
+        hashTime.textContent =
+          "0 ms";
+
+      }
+
+    }
+
+
+    algorithm.addEventListener(
+      "change",
+      updateAlgorithmUI
+    );
+
+
+    textInput.addEventListener(
+      "input",
+      updateTextStats
+    );
+
+
+    document
+      .getElementById("hashBtn")
+      .addEventListener(
+        "click",
+        generateHash
+      );
+
+
+    document
+      .getElementById("copyBtn")
+      .addEventListener(
+        "click",
+        async function () {
+
+          const value =
+            resultBox.textContent.trim();
+
+
+          if (
+            !value ||
+            value === "Awaiting input..." ||
+            value === "Please enter text." ||
+            value === "Hash generation failed." ||
+            value === "File hashing failed."
+          ) {
+
+            return;
+
+          }
+
+
+          try {
+
+            await navigator.clipboard.writeText(
+              value
+            );
+
+          } catch (error) {
+
+            const temporaryArea =
+              document.createElement("textarea");
+
+
+            temporaryArea.value =
+              value;
+
+            temporaryArea.style.position =
+              "fixed";
+
+            temporaryArea.style.left =
+              "-9999px";
+
+
+            document.body.appendChild(
+              temporaryArea
+            );
+
+            temporaryArea.focus();
+
+            temporaryArea.select();
+
+
+            try {
+
+              document.execCommand(
+                "copy"
+              );
+
+            } catch (copyError) {
+
+              console.error(
+                "Copy failed:",
+                copyError
+              );
+
+            }
+
+
+            temporaryArea.remove();
+
+          }
+
+        }
+      );
+
+
+    document
+      .getElementById("clearBtn")
+      .addEventListener(
+        "click",
+        function () {
+
+          textInput.value = "";
+
+          verifyInput.value = "";
+
+          verifyResult.innerHTML = "";
+
+          fileInput.value = "";
+
+          selectedFile.textContent =
+            "No file selected";
+
+          resultBox.textContent =
+            "Awaiting input...";
+
+          charCount.textContent =
+            "0";
+
+          byteCount.textContent =
+            "0";
+
+          hashLength.textContent =
+            "0";
+
+          hashTime.textContent =
+            "0 ms";
+
+        }
+      );
+
+
+    function exportTXT() {
+
+      const config =
+        getAlgorithmConfig();
+
+
+      const hash =
+        resultBox.textContent.trim();
+
+
+      if (
+        !hash ||
+        hash === "Awaiting input..." ||
+        hash === "Please enter text." ||
+        hash === "Hash generation failed." ||
+        hash === "File hashing failed."
+      ) {
+
+        return;
+
+      }
+
+
+      const blob =
+        new Blob(
+          [
+            hash + "\n"
+          ],
+          {
+            type:
+              "text/plain;charset=utf-8"
+          }
+        );
+
+
+      const url =
+        URL.createObjectURL(blob);
+
+
+      const link =
+        document.createElement("a");
+
+
+      link.href =
+        url;
+
+
+      link.download =
+        config.name
+          .toLowerCase()
+          .replace(
+            /[^a-z0-9]+/g,
+            "-"
+          ) +
+        ".txt";
+
+
+      document.body.appendChild(link);
+
+      link.click();
+
+      link.remove();
+
+
+      setTimeout(
+        () => URL.revokeObjectURL(url),
+        1000
+      );
+
+    }
+
+
+    document
+      .getElementById("txtBtn")
+      .addEventListener(
+        "click",
+        exportTXT
+      );
+
+
+    function exportJSON() {
+
+      const config =
+        getAlgorithmConfig();
+
+
+      const hash =
+        resultBox.textContent.trim();
+
+
+      if (
+        !hash ||
+        hash === "Awaiting input..." ||
+        hash === "Please enter text." ||
+        hash === "Hash generation failed." ||
+        hash === "File hashing failed."
+      ) {
+
+        return;
+
+      }
+
+
+      const data = {
+
+        application:
+          "NEXARIUM Keccak-256 & Whirlpool Generator",
+
+        algorithm:
+          config.name,
+
+        outputBits:
+          config.bits,
+
+        outputBytes:
+          config.bytes,
+
+        hexadecimalLength:
+          config.hexLength,
+
+        hash:
+          hash,
+
+        timestamp:
+          new Date().toISOString()
+
+      };
+
+
+      const blob =
+        new Blob(
+          [
+            JSON.stringify(
+              data,
+              null,
+              2
+            )
+          ],
+          {
+            type:
+              "application/json;charset=utf-8"
+          }
+        );
+
+
+      const url =
+        URL.createObjectURL(blob);
+
+
+      const link =
+        document.createElement("a");
+
+
+      link.href =
+        url;
+
+
+      link.download =
+        config.name
+          .toLowerCase()
+          .replace(
+            /[^a-z0-9]+/g,
+            "-"
+          ) +
+        ".json";
+
+
+      document.body.appendChild(link);
+
+      link.click();
+
+      link.remove();
+
+
+      setTimeout(
+        () => URL.revokeObjectURL(url),
+        1000
+      );
+
+    }
+
+
+    document
+      .getElementById("jsonBtn")
+      .addEventListener(
+        "click",
+        exportJSON
+      );
+
+
+    document
+      .getElementById("verifyBtn")
+      .addEventListener(
+        "click",
+        function () {
+
+          const config =
+            getAlgorithmConfig();
+
+
+          const expected =
+            verifyInput.value
+              .trim()
+              .toLowerCase();
+
+
+          const actual =
+            resultBox.textContent
+              .trim()
+              .toLowerCase();
+
+
+          if (!expected) {
+
+            verifyResult.innerHTML =
+              "<span class='error'>No hash provided.</span>";
+
+            return;
+
+          }
+
+
+          const pattern =
+            new RegExp(
+              `^[a-f0-9]{${config.hexLength}}$`
+            );
+
+
+          if (
+            !pattern.test(expected)
+          ) {
+
+            verifyResult.innerHTML =
+              `<span class="error">Invalid ${config.name} hash.</span>`;
+
+            return;
+
+          }
+
+
+          if (
+            actual === expected &&
+            actual.length === config.hexLength
+          ) {
+
+            verifyResult.innerHTML =
+              "<span class='success'>MATCH</span>";
+
+          } else {
+
+            verifyResult.innerHTML =
+              "<span class='error'>NO MATCH</span>";
+
+          }
+
+        }
+      );
+
+
+    fileInput.addEventListener(
+      "change",
+      async function () {
+
+        const file =
+          this.files &&
+          this.files[0];
+
+
+        if (!file) {
+
+          selectedFile.textContent =
+            "No file selected";
+
+          return;
+
+        }
+
+
+        selectedFile.textContent =
+          `${file.name} · ${file.size.toLocaleString()} bytes`;
+
+
+        const start =
+          performance.now();
+
+
+        try {
+
+          const buffer =
+            await file.arrayBuffer();
+
+
+          const data =
+            new Uint8Array(buffer);
+
+
+          const hash =
+            await hashBytes(data);
+
+
+          const end =
+            performance.now();
+
+
+          resultBox.textContent =
+            hash;
+
+          hashLength.textContent =
+            hash.length;
+
+          hashTime.textContent =
+            `${(end - start).toFixed(2)} ms`;
+
+          charCount.textContent =
+            "—";
+
+          byteCount.textContent =
+            data.length;
+
+        } catch (error) {
+
+          console.error(
+            "File hashing error:",
+            error
+          );
+
+
+          resultBox.textContent =
+            "File hashing failed.";
+
+          hashLength.textContent =
+            "0";
+
+          hashTime.textContent =
+            "0 ms";
+
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (
+          event.ctrlKey &&
+          event.key === "Enter"
+        ) {
+
+          event.preventDefault();
+
+          generateHash();
+
+        }
+
+      }
+    );
+
+
+    updateAlgorithmUI();
+
+    updateTextStats();
+
+
+    console.log(
+      "NEXARIUM Keccak-256 & Whirlpool Professional Ready"
+    );
+
+  </script>
+
+</body>
+</html>
