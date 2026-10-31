@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>https://keccak.nvo987.us/</id>
+
+  <title>NEXARIUM – Cryptographic Utilities</title>
+
+  <subtitle>
+    Professional browser-based Keccak-256 and Whirlpool
+    cryptographic hashing utilities.
+  </subtitle>
+
+  <link
+    href="https://keccak.nvo987.us/"
+    rel="alternate"
+    type="text/html"
+  />
+
+  <link
+    href="https://keccak.nvo987.us/atom.xml"
+    rel="self"
+    type="application/atom+xml"
+  />
+
+  <updated>2026-10-31T11:43:00+01:00</updated>
+
+  <author>
+    <name>Nicholas Van-Orton</name>
+    <uri>https://www.nvo987.us</uri>
+    <email>nvo@nvo987.us</email>
+  </author>
+
+  <rights>
+    Copyright 2026 Nicholas Van-Orton.
+    Original NEXARIUM website materials are reserved
+    unless otherwise expressly stated.
+    Third-party components retain their respective licenses.
+  </rights>
+
+  <category term="Cryptography"/>
+  <category term="Keccak-256"/>
+  <category term="Whirlpool"/>
+  <category term="NEXARIUM"/>
+  <category term="NVO987"/>
+  <category term="Digital Security"/>
+
+</feed>
