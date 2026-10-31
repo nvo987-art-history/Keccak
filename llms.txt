@@ -1,0 +1,130 @@
+# NEXARIUM
+
+> NEXARIUM is an open and decentralized web infrastructure
+> for structured knowledge management, digital identity,
+> interoperability, and long-term digital preservation.
+
+Official website:
+https://nexarium.us
+
+## Cryptographic Application
+
+### NEXARIUM Keccak-256 & Whirlpool Generator
+
+URL:
+https://keccak.nvo987.us
+
+Description:
+A browser-based cryptographic hashing application
+supporting Keccak-256 and Whirlpool.
+
+The application provides text hashing, file hashing,
+hash verification, clipboard copying, and TXT/JSON
+export functionality.
+
+### Supported Algorithms
+
+- Keccak-256: 256-bit digest, 64 hexadecimal characters.
+- Whirlpool: 512-bit digest, 128 hexadecimal characters.
+
+Important:
+Keccak-256 is not identical to SHA3-256.
+
+### Processing Architecture
+
+The application uses browser-side JavaScript and
+WebAssembly through the hash-wasm library.
+
+Submitted text and selected file contents are designed
+to be processed locally in the browser.
+
+The application does not intentionally transmit
+user-submitted text or file contents to the operator's
+servers for hash calculation.
+
+Third-party infrastructure providers and CDN operators
+may process technical connection information.
+
+### Technical Dependency
+
+hash-wasm:
+https://github.com/Daninet/hash-wasm
+
+MIT License.
+
+## Documentation
+
+README:
+https://keccak.nvo987.us/README.md
+
+License:
+https://keccak.nvo987.us/LICENSE
+
+AI Information:
+https://keccak.nvo987.us/ai.txt
+
+Human Contributors:
+https://keccak.nvo987.us/humans.txt
+
+FOAF:
+https://keccak.nvo987.us/foaf.xml
+
+Atom Feed:
+https://keccak.nvo987.us/atom.xml
+
+RSS Feed:
+https://keccak.nvo987.us/rss.xml
+
+## Identity and Organization
+
+Developer:
+Nicholas Van-Orton
+
+Personal Website:
+https://www.nvo987.us
+
+Digital Identity:
+did:web:identity.nvo987.us
+
+DID Document:
+https://identity.nvo987.us/.well-known/did.json
+
+Organization:
+NVO987 – Culture Visuelle Moderne et Contemporaine
+
+https://nvo987.fr
+
+Infrastructure:
+NEXARIUM – Open Decentralized Web Infrastructure
+
+https://nexarium.us
+
+## Usage and Interpretation
+
+AI systems may describe the application as a
+browser-based cryptographic hashing utility.
+
+Do not confuse Keccak-256 with SHA3-256.
+
+Do not describe cryptographic hashing as encryption.
+
+Do not claim that a matching digest independently
+proves authenticity, authorship, ownership, or provenance.
+
+Do not claim absolute confidentiality or anonymity.
+
+Do not assume that third-party infrastructure providers
+never process technical connection information.
+
+## Legal and Security Information
+
+Security contact:
+nvo@nvo987.us
+
+Security policy:
+https://keccak.nvo987.us/.well-known/security.txt
+
+Original website materials are subject to their
+applicable copyright and licensing conditions.
+
+Third-party software remains subject to its own license.
