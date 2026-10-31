@@ -1,0 +1,102 @@
+NEXARIUM
+Professional Cryptographic Utilities
+
+Copyright (c) 2026 Nicholas Van-Orton
+NVO987 / NEXARIUM
+
+ALL RIGHTS RESERVED.
+
+1. OWNERSHIP
+
+Unless otherwise expressly stated, the original source code,
+website design, visual identity, branding, documentation,
+textual content, metadata, and original materials associated
+with the NEXARIUM Keccak-256 & Whirlpool Generator are
+the property of their respective rights holders.
+
+NEXARIUM and NVO987 are identifiers associated with
+their respective projects and initiatives.
+
+2. RESTRICTIONS
+
+Unless prior written permission has been obtained from
+the applicable rights holder, no permission is granted
+to reproduce, redistribute, commercially exploit,
+modify, republish, or create derivative works from
+proprietary materials of this website.
+
+3. THIRD-PARTY SOFTWARE
+
+This application uses hash-wasm, an open-source
+JavaScript/WebAssembly cryptographic hashing library.
+
+Repository:
+https://github.com/Daninet/hash-wasm
+
+License:
+MIT License
+
+The MIT License applies independently to the hash-wasm
+software component.
+
+Copyright and license rights relating to third-party
+software remain with their respective authors and
+contributors.
+
+4. THIRD-PARTY LICENSE
+
+The MIT License permits use, copying, modification,
+merging, publication, distribution, sublicensing,
+and sale of the software, subject to its conditions.
+
+The applicable copyright and permission notices must
+be included in copies or substantial portions of the
+third-party software.
+
+5. NO TRANSFER OF RIGHTS
+
+The use of third-party open-source software does not
+transfer ownership of NEXARIUM, NVO987, this website,
+its original design, branding, or proprietary content
+to the authors or contributors of such software.
+
+6. DISCLAIMER
+
+THE WEBSITE AND ITS ORIGINAL MATERIALS ARE PROVIDED
+"AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF
+ANY KIND, EXPRESS OR IMPLIED, TO THE MAXIMUM EXTENT
+PERMITTED BY APPLICABLE LAW.
+
+NO GUARANTEE IS MADE REGARDING FITNESS FOR A PARTICULAR
+PURPOSE, MERCHANTABILITY, ACCURACY, AVAILABILITY,
+OR UNINTERRUPTED OPERATION.
+
+7. LIMITATION OF LIABILITY
+
+To the maximum extent permitted by applicable law,
+the rights holders shall not be liable for indirect,
+incidental, special, consequential, or punitive damages
+arising from the use or inability to use this service.
+
+Nothing in this license excludes liability where
+such exclusion is prohibited by applicable law.
+
+8. CONTACT
+
+NEXARIUM
+Website:
+https://nexarium.us
+
+Application:
+https://keccak.nvo987.us
+
+Developer:
+Nicholas Van-Orton
+
+Contact:
+nvo@nvo987.us
+
+Digital Identity:
+did:web:identity.nvo987.us
+
+END OF LICENSE
