@@ -1,0 +1,13 @@
+Contact: mailto:nvo@nvo987.us
+
+Canonical: https://keccak.nvo987.us/.well-known/security.txt
+
+Expires: 2027-10-31T23:59:59.000Z
+
+Preferred-Languages: en, fr, 
+
+Policy: https://keccak.nvo987.us/
+
+Acknowledgments: https://keccak.nvo987.us/
+
+Hiring: https://nexarium.us/
