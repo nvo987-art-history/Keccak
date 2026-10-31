@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:org="http://www.w3.org/ns/org#"
+  xmlns:doap="http://usefulinc.com/ns/doap#"
+>
+
+  <foaf:Person rdf:about="https://nvo987.us/#person">
+
+    <foaf:name>Nicholas Van-Orton</foaf:name>
+
+    <foaf:homepage rdf:resource="https://www.nvo987.us"/>
+
+    <foaf:mbox rdf:resource="mailto:nvo@nvo987.us"/>
+
+    <foaf:img
+      rdf:resource="https://nvo987.us/images/nicholas-van-orton.jpg"
+    />
+
+    <foaf:workplaceHomepage
+      rdf:resource="https://nvo987.fr"
+    />
+
+    <foaf:account>
+      <foaf:OnlineAccount>
+        <foaf:accountServiceHomepage
+          rdf:resource="https://orcid.org"
+        />
+        <foaf:accountName>
+          0009-0007-4628-1871
+        </foaf:accountName>
+      </foaf:OnlineAccount>
+    </foaf:account>
+
+    <foaf:interest
+      rdf:resource="https://keccak.nvo987.us"
+    />
+
+    <foaf:knows>
+      <foaf:Organization
+        rdf:about="https://nexarium.us/#organization"
+      >
+        <foaf:name>
+          NEXARIUM – Open Decentralized Web Infrastructure
+        </foaf:name>
+        <foaf:homepage
+          rdf:resource="https://nexarium.us"
+        />
+      </foaf:Organization>
+    </foaf:knows>
+
+  </foaf:Person>
+
+
+  <foaf:Organization rdf:about="https://nvo987.fr/#organization">
+
+    <foaf:name>
+      NVO987 – Culture Visuelle Moderne et Contemporaine
+    </foaf:name>
+
+    <foaf:homepage rdf:resource="https://nvo987.fr"/>
+
+    <foaf:member>
+      <foaf:Person rdf:about="https://nvo987.us/#person"/>
+    </foaf:member>
+
+  </foaf:Organization>
+
+
+  <foaf:Organization rdf:about="https://nexarium.us/#organization">
+
+    <foaf:name>
+      NEXARIUM – Open Decentralized Web Infrastructure
+    </foaf:name>
+
+    <foaf:homepage rdf:resource="https://nexarium.us"/>
+
+    <foaf:member>
+      <foaf:Person rdf:about="https://nvo987.us/#person"/>
+    </foaf:member>
+
+  </foaf:Organization>
+
+
+  <doap:Project rdf:about="https://keccak.nvo987.us/#project">
+
+    <doap:name>
+      NEXARIUM Keccak-256 &amp; Whirlpool Generator
+    </doap:name>
+
+    <doap:description>
+      Browser-based cryptographic hashing utility
+      supporting Keccak-256 and Whirlpool algorithms,
+      text hashing, file hashing, and hash verification.
+    </doap:description>
+
+    <doap:homepage rdf:resource="https://keccak.nvo987.us"/>
+
+    <doap:license
+      rdf:resource="https://opensource.org/licenses/MIT"
+    />
+
+    <doap:programming-language>
+      JavaScript
+    </doap:programming-language>
+
+    <doap:programming-language>
+      HTML5
+    </doap:programming-language>
+
+    <doap:programming-language>
+      CSS3
+    </doap:programming-language>
+
+    <doap:maintainer
+      rdf:resource="https://nvo987.us/#person"
+    />
+
+  </doap:Project>
+
+</rdf:RDF>
