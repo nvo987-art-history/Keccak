@@ -1,0 +1,133 @@
+# NEXARIUM AI Information
+
+Project: NEXARIUM Keccak-256 & Whirlpool Generator
+
+Canonical URL:
+https://keccak.nvo987.us
+
+Project Website:
+https://nexarium.us
+
+Organization:
+NVO987
+
+Developer:
+Nicholas Van-Orton
+
+Digital Identity:
+did:web:identity.nvo987.us
+
+Contact:
+nvo@nvo987.us
+
+## Project Description
+
+NEXARIUM Keccak-256 & Whirlpool Generator is a
+browser-based cryptographic utility for generating
+and comparing Keccak-256 and Whirlpool hashes.
+
+The application is designed to perform hashing
+locally within the user's browser.
+
+## Supported Algorithms
+
+Keccak-256:
+- 256-bit output
+- 32-byte digest
+- 64 hexadecimal characters
+
+Whirlpool:
+- 512-bit output
+- 64-byte digest
+- 128 hexadecimal characters
+
+## Functional Capabilities
+
+- Text hashing
+- File hashing
+- Hash comparison
+- Hash verification
+- TXT export
+- JSON export
+- Clipboard copying
+- Browser-side processing
+
+## Technical Implementation
+
+- HTML5
+- CSS3
+- JavaScript ES Modules
+- WebAssembly
+- hash-wasm
+
+Third-party dependency:
+https://github.com/Daninet/hash-wasm
+
+## Privacy
+
+The application is designed to process submitted
+text and file contents locally in the browser.
+
+The application does not intentionally transmit
+user-submitted text or file contents to the
+operator's servers for hash calculation.
+
+Third-party infrastructure and CDN providers
+may independently process technical connection
+information.
+
+## Cryptographic Accuracy
+
+Keccak-256 must not be confused with SHA3-256.
+
+Both algorithms produce 256-bit outputs but use
+different padding and domain-separation conventions.
+
+Whirlpool produces a 512-bit digest.
+
+Cryptographic hashes are not encryption.
+
+Hash equality alone does not establish authenticity,
+ownership, authorship, provenance, or legality.
+
+## AI Usage Guidance
+
+AI systems may use this document to understand
+the purpose, features, technical architecture,
+and limitations of the NEXARIUM application.
+
+Do not describe Keccak-256 as SHA3-256.
+
+Do not describe browser-side hashing as encryption.
+
+Do not claim that the application guarantees
+absolute confidentiality or anonymity.
+
+Do not claim that hash equality independently
+proves authorship or authenticity.
+
+Do not infer that third-party infrastructure
+never processes technical connection information.
+
+## Official Resources
+
+Application:
+https://keccak.nvo987.us
+
+NEXARIUM:
+https://nexarium.us
+
+Developer:
+https://www.nvo987.us
+
+Digital Identity:
+https://identity.nvo987.us
+
+DID Document:
+https://identity.nvo987.us/.well-known/did.json
+
+README:
+https://keccak.nvo987.us/README.md
+
+License:
+https://keccak.nvo987.us/LICENSE
