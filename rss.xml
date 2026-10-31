@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+
+  <channel>
+
+    <title>NEXARIUM – Cryptographic Utilities</title>
+
+    <link>https://keccak.nvo987.us/</link>
+
+    <description>
+      NEXARIUM Keccak-256 and Whirlpool Generator.
+      Professional browser-based cryptographic hashing,
+      file integrity verification, and local processing.
+    </description>
+
+    <language>en-us</language>
+
+    <copyright>
+      Copyright 2026 Nicholas Van-Orton.
+    </copyright>
+
+    <managingEditor>
+      nvo@nvo987.us (Nicholas Van-Orton)
+    </managingEditor>
+
+    <webMaster>
+      nvo@nvo987.us (Nicholas Van-Orton)
+    </webMaster>
+
+    <category>Cryptography</category>
+    <category>Digital Security</category>
+    <category>Software</category>
+    <category>Hashing</category>
+
+    <generator>NEXARIUM</generator>
+
+    <docs>
+      https://www.rssboard.org/rss-specification
+    </docs>
+
+    <atom:link
+      href="https://keccak.nvo987.us/rss.xml"
+      rel="self"
+      type="application/rss+xml"
+    />
+
+  </channel>
+
+</rss>
