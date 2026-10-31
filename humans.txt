@@ -1,0 +1,123 @@
+/* TEAM */
+
+Project Name: NEXARIUM Keccak-256 & Whirlpool Generator
+
+Developer:
+Nicholas Van-Orton
+
+Organization:
+NVO987 – Culture Visuelle Moderne et Contemporaine
+
+Infrastructure:
+NEXARIUM – Open Decentralized Web Infrastructure
+
+Website:
+https://www.nvo987.us
+
+Application:
+https://keccak.nvo987.us
+
+Infrastructure Website:
+https://nexarium.us
+
+Contact:
+nvo@nvo987.us
+
+Digital Identity:
+did:web:identity.nvo987.us
+
+DID Document:
+https://identity.nvo987.us/.well-known/did.json
+
+
+/* TECHNOLOGY */
+
+Frontend:
+HTML5
+CSS3
+JavaScript ES Modules
+
+Cryptographic Engine:
+hash-wasm
+
+Cryptographic Runtime:
+WebAssembly
+
+Algorithms:
+Keccak-256
+Whirlpool
+
+Input Encoding:
+UTF-8
+
+Processing:
+Browser-side / Client-side
+
+File Processing:
+JavaScript File API
+
+Hash Export:
+TXT / JSON
+
+Data Verification:
+Hexadecimal digest comparison
+
+
+/* THIRD-PARTY SOFTWARE */
+
+Library:
+hash-wasm
+
+Repository:
+https://github.com/Daninet/hash-wasm
+
+License:
+MIT License
+
+CDN:
+jsDelivr
+
+
+/* PRIVACY */
+
+No application-level registration.
+No intentionally implemented analytics.
+No intentionally implemented advertising.
+No intentionally implemented cross-site tracking.
+
+Text and file contents are designed to be
+processed locally by the browser.
+
+Third-party infrastructure may process
+technical connection information.
+
+
+/* DESIGN */
+
+Visual Direction:
+Minimalist Editorial Design
+
+Primary Colors:
+Ink / Cream / Warm Bronze
+
+Typography:
+Inter / Georgia
+
+Responsive Layout:
+Desktop / Tablet / Mobile
+
+Accessibility:
+Semantic HTML
+Keyboard Navigation
+Visible Focus States
+Reduced Motion Support
+ARIA Live Regions
+
+
+/* PROJECT */
+
+NEXARIUM
+
+Professional Cryptographic Utilities.
+
+Copyright 2026 Nicholas Van-Orton.
